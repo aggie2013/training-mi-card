@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 50,
@@ -34,8 +35,36 @@ class MyApp extends StatelessWidget {
                     fontFamily: 'SourceCodePro',
                     letterSpacing: 2,
                   ),
+                ),  
+                Container(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.phone, color: Colors.teal),
+                      SizedBox(width:20),
+                      Text('+44 123 4567 8901',
+                      style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
+                    ],
+                  ),
                 ),
-              ]
+                Container(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  padding: EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.mail, color: Colors.teal),
+                      SizedBox(width:20),
+                      Text('angela@email.com',
+                      style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                ),
+              ]   
             ),
           ),
         ),
