@@ -35,33 +35,38 @@ class MyApp extends StatelessWidget {
                     fontFamily: 'SourceCodePro',
                     letterSpacing: 2,
                   ),
+                ),
+                SizedBox(height: 20, width: 180,
+                child: Divider(color: Colors.teal.shade100)
                 ),  
-                Container(
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.phone, color: Colors.teal),
-                      SizedBox(width:20),
-                      Text('+44 123 4567 8901',
-                      style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
-                    ],
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
+                    child: ListTile(
+                      leading:Icon(Icons.phone, color: Colors.teal),
+                      title: Text('+44 123 4567 8901',
+                        style: TextStyle(
+                          color: Colors.teal, 
+                          fontWeight: FontWeight.bold)
+                          ),
+                    ),
                   ),
                 ),
-                Container(
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.mail, color: Colors.teal),
-                      SizedBox(width:20),
-                      Text('angela@email.com',
-                      style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold)),
-                    ],
+                  child: Padding(
+                    padding: EdgeInsets.all(5),
+                    child: ListTile(
+                      leading:Icon(Icons.mail, color: Colors.teal),
+                      title: Text('angela@email.com',
+                        style: TextStyle(
+                          color: Colors.teal, 
+                          fontWeight: FontWeight.bold)
+                          ),
+                    ),
                   ),
                 ),
               ]   
@@ -71,4 +76,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
